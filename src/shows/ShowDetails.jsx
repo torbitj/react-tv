@@ -4,9 +4,10 @@ import EpisodeList from "../episodes/EpisodeList";
 import EpisodeDetails from "../episodes/EpisodeDetails";
 
 /** Allows users to browse through the episodes of the given show */
-export default function ShowDetails(show) {
-  const [selectedEpisode, setSelectedEpisode] = useState({})
-  if (!show.title) {
+export default function ShowDetails({show}) {
+  const [selectedEpisode, setSelectedEpisode] = useState()
+  console.log(show);
+  if (!show) {
     return <p>Please select a show!</p>
   }
   return (

@@ -5,11 +5,13 @@ export default function ShowSelection({shows, setSelectedShow}) {
   return (
     <nav className="shows">
       {shows.map((show) => {
-        <a href="#" className="show" key={show.title} onClick={() => {
-          setSelectedShow(show);
-        }}>
-          {show.title}
-        </a>;
+        return (
+          <a href="#" className="show" key={show.name} onClick={() => {
+            setSelectedShow(show);
+          }}>
+            {show.name}
+          </a>
+        )
       })}
     </nav>
   );
